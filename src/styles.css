@@ -1,8 +1,126 @@
-/* add css styles here (optional) */
 
-.test {
-  display: inline-block;
-  margin: 2em auto;
-  border: 2px solid #000;
-  font-size: 2em;
+/*
+Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+http://cssreset.com
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+/*   font-size: 100%;
+  font: inherit; */
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Document Styles */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  background: grey;
+}
+
+/* Select reset */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color: #aaa;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: #aaa;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #aaa;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #aaa;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #aaa;
+}
+
+*:focus {
+  outline: none;
+}
+
+b {
+  font-weight: 700;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+body {
+  overflow-y: hidden;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+/* Firefox Only */
+@-moz-document url-prefix() {
+  textarea {
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  }
+}
+
+input[type="radio"] {
+  margin-right: 5px;
 }

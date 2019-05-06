@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 
-// import s from './Input.scss';
+import s from './Input.scss';
 
 type Props = {
   label: string|number,
@@ -18,10 +18,10 @@ const Input = (props: Props) => {
   const { label, value, name, placeholder, onChange, disabled, onBlur } = props;
 
   return (
-    <label >
+    <label className={s.label}>
       { label }
       <input
-        // className={s.input}
+        className={s.input}
         type="text"
         value={value}
         name={name}

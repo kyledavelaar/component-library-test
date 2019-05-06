@@ -1,0 +1,23 @@
+@import '../variables.scss';
+
+#wrapper {
+  margin: 10px;
+  position: relative;
+}
+
+.icon {
+  color: $graphite;
+  position: absolute;
+  top: 10px;
+  cursor: pointer;
+}
+
+.search_input {
+  width: 300px;
+  overflow: auto;
+  border: none;
+  border-bottom: 1px solid $dustygrey;
+  font-size: 14px;
+  padding: 0px 20px;
+  background: transparent;
+}

@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBar renders SearchBar component created 1`] = `
+<div
+  id={undefined}
+>
+  <img
+    alt="search"
+    className={undefined}
+    onClick={[Function]}
+    src="search.svg"
+  />
+  <input
+    className={undefined}
+    onChange={[Function]}
+    onKeyUp={[Function]}
+    placeholder="search..."
+    type="text"
+    value="hi there"
+  />
+</div>
+`;

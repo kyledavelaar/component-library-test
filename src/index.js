@@ -1,11 +1,21 @@
-// import React, { Component } from 'react'
 
 import Input from './Input/Input.jsx';
 import Header from './Header/Header.jsx';
+import SearchBar from './SearchBar/SearchBar.jsx';
+
+
+export {
+  Input,
+  Header,
+  SearchBar
+}
+
+
+
+
+// import React, { Component } from 'react'
 
 // import styles from './styles.css'
-
-export { Input, Header }
 
 // export default class ExampleComponent extends Component {
 

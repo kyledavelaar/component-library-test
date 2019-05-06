@@ -1,4 +1,4 @@
-/* @import '../variables.scss';
+@import '../variables.scss';
 
 
 html, body, div, span, applet, object, iframe,
@@ -19,49 +19,12 @@ time, mark, audio, video {
   border: 0;
   vertical-align: baseline;
 }
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol, ul {
-  list-style: none;
-}
-blockquote, q {
-    quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
 
 html {
   box-sizing: border-box;
 }
 *, *:before, *:after {
   box-sizing: inherit;
-}
-
-html, body, #root {
-  height: 100%;
-  width: 100%;
-}
-
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-select::-ms-expand {
-  display: none;
 }
 
 ::-webkit-input-placeholder {
@@ -84,39 +47,31 @@ select::-ms-expand {
   outline: none;
 }
 
-b {
-  font-weight: 700;
-}
-
-button {
-  cursor: pointer;
-  border: none;
-}
-
-button:focus {
-  outline: none;
-}
-
 body {
-  overflow-y: hidden;
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
   letter-spacing: 1px;
   font-weight: 400;
   font-size: 14px;
 }
 
-@-moz-document url-prefix() {
-  textarea {
-    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+/* --------------------------------------------------------- */
+
+
+
+
+.label {
+  margin: 10px 0;
+  color: $grey;
+  font-weight: 800;
+  font-size: 12px;
+}
+
+.input {
+  @include input();
+  height: 40px;
+
+  &:disabled {
+    color: $disabled;
+    cursor: default;
   }
 }
-
-input[type="radio"] {
-  margin-right: 5px;
-}
-
-
-.header {
-  color: $red;
-}
- */

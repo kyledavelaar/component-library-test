@@ -1,13 +1,28 @@
 import React, { Component } from 'react'
 
-import { Input, Header } from 'component-library-test'
+import { Input, Header, SearchBar } from 'component-library-test'
+import s from './index.css';
 
 export default class App extends Component {
   render () {
     return (
-      <div>
+      <div className={s.container}>
         <Header></Header>
-        <Input></Input>
+        <Input
+          label="CITY"
+          name="city"
+          placeholder=""
+          value={""}
+          onChange={ () => {console.log('changed')} }
+          disabled={false}
+          onBlur={ () => {console.log('blur')} }
+        />
+        <SearchBar
+          placeholder="Search Members"
+          query=""
+          onSearch={ () => {console.log('search')} }
+          onChange={ () => {console.log('change')} }
+        />
       </div>
     )
   }
