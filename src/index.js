@@ -1,22 +1,36 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+// import React, { Component } from 'react'
 
-import styles from './styles.css'
+import Input from './Input/Input';
+import Header from './Header/Header';
 
-export default class ExampleComponent extends Component {
-  static propTypes = {
-    text: PropTypes.string
-  }
+// import styles from './styles.css'
 
-  render() {
-    const {
-      text
-    } = this.props
+export { Input, Header }
 
-    return (
-      <div className={styles.test}>
-        Example Component for Kyle: {text}
-      </div>
-    )
-  }
-}
+// export default class ExampleComponent extends Component {
+
+//   render() {
+//     const {
+//       text
+//     } = this.props
+
+//     return (
+//       <div className={styles.test}>
+//         Example Component for Kyle: {text}
+//       </div>
+//     )
+//   }
+// }
+
+
+// import Foo from './Foo'
+// import Bar from './Bar'
+
+// export Foo and Bar as named exports
+// export { Foo, Bar }
+
+// alternative, more concise syntax for named exports
+// export { default as Foo } from './Foo'
+
+// you can optionally also set a default export for your module
+// export default { Foo, Bar }
