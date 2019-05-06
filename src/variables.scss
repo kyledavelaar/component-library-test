@@ -1,0 +1,294 @@
+////////////////////////////////////////
+// VARIABLES
+////////////////////////////////////////
+// IE does not support CSS variables, but the styles below
+// are a template for future theming in non-IE browsers
+/*
+#app[data-theme="light"] {
+  --white: #FFFFFF;
+  --graphite: #555555;
+}
+
+#app[data-theme="dark"] {
+  --white: #555555;
+  --graphite: #FFFFFF;
+}
+
+$graphite: var(--graphite) !default;
+$white: var(--white) !default;
+*/
+
+
+$white: #FFFFFF;
+$graphite: #555555;
+$grey: #6B757C;
+$darkgrey: #BEBDBD;
+$nightrider: #333333;
+$lightgrey: #f5f6f7;
+$lightgrey2: #e6e9e9;
+$disabled: #a3a1a1;
+$darkblue: #0075AC;
+$moutainmeadow: #1882B4;
+$neonblue: #3FA8D7;
+$blue: #66ACCD;
+$lightblue: #C7E1ED;
+$lightblue2: #F4F9FC;
+$skyblue: #F7FCFF;
+$orange: #F88800;
+$inactiveorange: #FDD099;
+$lightorange: #FDD099;
+$red: #ce1010;
+$lightred: #FFF3F3;
+$green: #5cb85c;
+$lightgreen: #E8FCEE;
+$balticsea: #333C44;
+$dustygrey: #979797;
+$mercurygrey: #e2e2e2;
+$blacksqueeze: #E2EDF4;
+$border1: 1px solid lightgrey;
+$border2: 1px solid #E8EBED;
+$border3: 1px solid #E7EEF3;
+$border4: 1px solid #E8B2B3;
+$border5: .5px solid #D4D4D4;
+
+
+////////////////////////////////////////
+// BUTTONS
+////////////////////////////////////////
+@mixin hover_btn($bg: $darkblue) {
+  background: $bg !important;
+  cursor: pointer;
+  @extend %shadow;
+}
+
+%btn {
+  padding: 13px 20px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+@mixin button($size: 16px) {
+  @extend %btn;
+  font-size: $size;
+  color: $white;
+  background: $orange;
+
+  &:hover:enabled {
+    @include hover_btn();
+  }
+  &:disabled {
+    cursor: default;
+  }
+}
+
+@mixin button2($size: 16px) {
+  @extend %btn;
+  font-size: $size;
+  font-weight: 700;
+  color: $orange;
+  background: transparent;
+  border: 1px solid $orange;
+
+  &:hover:enabled {
+    border: 1px solid $blue;
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+@mixin button-alert($size: 16px) {
+  @extend %btn;
+  font-size: $size;
+  color: $white;
+  background: $red;
+
+  &:hover {
+    @include hover_btn(darken($red, 5%));
+  }
+}
+
+
+
+
+
+////////////////////////////////////////
+// TEXT
+////////////////////////////////////////
+
+%text {
+  color: $graphite;
+  font-weight: 400;
+}
+
+%header1 {
+  @extend %ellipsis;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+%header2 {
+  @extend %ellipsis;
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+%header3 {
+  @extend %ellipsis;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+%header4 {
+  @extend %text;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+%header5 {
+  @extend %paragraph;
+  font-weight: 700;
+}
+
+%header6 {
+  @extend %header5;
+  font-size: 12px !important;
+  color: $grey !important;
+}
+
+%paragraph {
+  @extend %text;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+%ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+%hover {
+  color: #66ACCD !important;
+  cursor: pointer;
+}
+
+h1 {
+  @extend %header1;
+}
+
+h2 {
+  @extend %header2;
+}
+
+h3 {
+  @extend %header3;
+}
+
+h4 {
+  @extend %header4;
+}
+
+h5 {
+  @extend %header5;
+}
+
+h6 {
+  @extend %header6;
+}
+
+p {
+  @extend %paragraph;
+}
+
+////////////////////////////////////////
+// MODALS
+////////////////////////////////////////
+
+@mixin modal($height, $width) {
+  z-index: 4;
+  min-height: $height;
+  width: $width;
+  background: $white;
+  @extend %shadow1;
+  border: $border2;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+@mixin modal_bg($bg: transparent) {
+  z-index: 3;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: $bg;
+}
+
+
+////////////////////////////////////////
+// OTHER
+////////////////////////////////////////
+@mixin input($width: 100%) {
+  color: $graphite;
+  background: $white;
+  @extend %ellipsis;
+  text-align: left;
+  padding: 7px 10px;
+  font-size: 14px;
+  border: $border1;
+  border-radius: 7px;
+  width: 100%;
+  margin: 7px 0;
+  font-family: arial;
+}
+
+@mixin spinner($left, $top, $size) {
+  position: absolute;
+  left: $left;
+  top: $top;
+  transform: translate(-50%, -50%);
+  font-size: $size;
+  color: $darkblue;
+}
+
+%shadow {
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.03), -2px -2px 10px rgba(0, 0, 0, 0.03), 2px -2px 10px rgba(0, 0, 0, 0.03), -2px 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+%shadow1 {
+  box-shadow: 0px 3px 6px 0 rgba(0, 0, 0, 0.05);
+}
+
+@mixin tooltip($width: 250px) {
+  visibility: hidden;
+  width: $width;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 8px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  top: 135%;
+  left: 50%;
+  margin-left: -($width)/2;
+  opacity: 0;
+  transition: opacity 0.3s;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #555 transparent;
+  }
+}

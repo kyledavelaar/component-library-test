@@ -1,6 +1,6 @@
 {
   "name": "component-library-test-kyle-davelaar",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "component library",
   "author": "kyledavelaar",
   "license": "MIT",
@@ -55,7 +55,8 @@
     "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-postcss": "^1.6.2",
     "rollup-plugin-url": "^1.4.0",
-    "flow-bin": "^0.98.1"
+    "flow-bin": "^0.98.1",
+    "node-sass": "^4.12.0"
   },
   "files": [
     "dist"

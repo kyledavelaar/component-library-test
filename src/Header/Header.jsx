@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 
-// import s from './Input.scss';
+import s from './Header.scss';
 
 // type Props = {
 //   label: string|number,
@@ -17,7 +17,7 @@ import * as React from 'react';
 export const Header = (props) => {
 
   return (
-    <h1>My Header says {props.text}</h1>
+    <h1 className={s.header}>My Header says {props.text}</h1>
   )
 }
 
