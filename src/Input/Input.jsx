@@ -4,17 +4,17 @@ import * as React from 'react';
 
 // import s from './Input.scss';
 
-// type Props = {
-//   label: string|number,
-//   value: string|number,
-//   name: string|number,
-//   placeholder: string|number,
-//   onChange: (e: SyntheticEvent<any>) => void,
-//   onBlur: null|(e: SyntheticEvent<any>) => void,
-//   disabled: boolean,
-// }
+type Props = {
+  label: string|number,
+  value: string|number,
+  name: string|number,
+  placeholder: string|number,
+  onChange: (e: SyntheticEvent<any>) => void,
+  onBlur: null|(e: SyntheticEvent<any>) => void,
+  disabled: boolean,
+}
 
-const Input = (props) => {
+const Input = (props: Props) => {
   const { label, value, name, placeholder, onChange, disabled, onBlur } = props;
 
   return (
