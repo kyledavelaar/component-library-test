@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm install --save component-library-test
+npm install --save component-library-test-kyle-davelaar
 ```
 
 ## Usage
@@ -15,15 +15,34 @@ npm install --save component-library-test
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'component-library-test'
+import { Input, Header, SearchBar } from 'component-library-test-kyle-davelaar'
+import s from './index.css';
 
-class Example extends Component {
+export default class App extends Component {
   render () {
     return (
-      <MyComponent />
+      <div className={s.container}>
+        <Header></Header>
+        <Input
+          label="CITY"
+          name="city"
+          placeholder=""
+          value={""}
+          onChange={ () => {console.log('changed')} }
+          disabled={false}
+          onBlur={ () => {console.log('blur')} }
+        />
+        <SearchBar
+          placeholder="Search Members"
+          query=""
+          onSearch={ () => {console.log('search')} }
+          onChange={ () => {console.log('change')} }
+        />
+      </div>
     )
   }
 }
+
 ```
 
 ## License
