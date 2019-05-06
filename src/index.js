@@ -1,7 +1,7 @@
 // import React, { Component } from 'react'
 
-import Input from './Input/Input';
-import Header from './Header/Header';
+import Input from './Input/Input.jsx';
+import Header from './Header/Header.jsx';
 
 // import styles from './styles.css'
 
